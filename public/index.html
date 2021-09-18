@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+
+    <h3>Sign Up Form</h3>
+    <form  method="post">
+        <input id="registerName" type="text" />
+        <input id="registerEmail" type="email" />
+        <input id="registerPass" type="password" />
+      <button id="register" onclick="{register}" >Register</button>
+    </form>
+
+    <h3>Sign In Form</h3>
+    <form method="post">
+        <input id="loginEmail" type="email" />
+        <input id="loginPass" type="password" />
+        <button id="login" onclick="{login}">Login</button>
+    </form>
+
+    <script>
+      
+      async function register(e) {
+        // let btn = document.querySelector("register");
+        e.preventDefault();
+        let name = document.getElementById("registerName").value;
+        let email = document.getElementById("registerEmail").value;
+        let password = document.getElementById("registerPassword").value;
+
+        console.log("hello register");
+
+        // let resp = await axios.post("/api/auth/signup", {
+        //   name,
+        //   email,
+        //   password,
+        // });
+
+        console.log(resp.data);
+      }
+
+    async function login(e) {
+        // let btn = document.querySelector("register");
+        e.preventDefault();
+        console.log("hello");
+        let email = document.getElementById("loginEmail").value;
+        let password = document.getElementById("loginPass").value;
+
+        console.log(email);
+
+        // let resp = await axios.post("/api/auth/signup", {
+        //   name,
+        //   email,
+        //   password,
+        // });
+
+        // console.log(resp.data);
+      }
+      
+    </script>
+  </body>
+</html>
